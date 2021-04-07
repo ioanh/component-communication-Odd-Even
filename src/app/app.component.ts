@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'component-communication';
+
+  onEventCatched(data){
+    console.log(data.eventNumber)
+  }
 }
+
+
