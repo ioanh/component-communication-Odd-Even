@@ -8,14 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'component-communication';
 
-
-
   evenArr = []
   oddArr = []
 
   onEventCatched(data){
-
-    if(data.eventNumber % 2 == 0){
+    if(data.eventNumber % 2 === 0){
       this.evenArr.push(data.eventNumber)
     }
     else {

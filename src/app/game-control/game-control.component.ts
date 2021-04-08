@@ -12,9 +12,13 @@ export class GameControlComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  
   @Output('eventTriggered') eventTriggered = new EventEmitter <{eventNumber: number}>();
+
   interval;
+
   num: number = 0;
+
   startGame(){
     this.interval = setInterval(() => {
       this.eventTriggered.emit({
@@ -22,6 +26,7 @@ export class GameControlComponent implements OnInit {
       })
     }, 1000)
   }
+
   endGame(){
     clearInterval(this.interval)
   }

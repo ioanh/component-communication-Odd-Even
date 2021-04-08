@@ -1,11 +1,15 @@
 <div class="row">
-  <h1>EVENS</h1>
-  <app-even *ngFor="let nums of evenArr" [even]="nums" ></app-even>
-</div>
-<div class="row">
-  <app-game-control (eventTriggered)="onEventCatched($event)"></app-game-control>
-</div>
-<div class="row">
-  <h1>ODDS</h1>
-  <app-odd *ngFor="let nums of oddArr" [odd]="nums"></app-odd>
+  <div class="container">
+    <div class="col-sm-4">
+      <h2>Evens</h2>
+      <app-even *ngFor="let nums of evenArr" [even]="nums" ></app-even>
+    </div>
+    <div class="col-sm-4">
+      <app-game-control (eventTriggered)="onEventCatched($event)"></app-game-control>
+    </div>
+    <div class="col-sm-4">
+      <h2>Odds</h2>
+      <app-odd *ngFor="let nums of oddArr" [odd]="nums"></app-odd>
+    </div>
+  </div>
 </div>
